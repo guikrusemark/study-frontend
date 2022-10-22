@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Barbearia Alura</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+</head>
+
+<body>
+	<header>
+		<div class="caixa">
+			<a class="logo-a" href="index.html"><img class="logo-header" src="logo.png" alt="logo da barbearia"></a>
+
+			<nav>
+				<ul>
+					<li class="itens-menu"><a href="index.html">Home</a></li>
+					<li class="itens-menu"><a href="produtos.html">Produtos</a></li>
+					<li class="itens-menu"><a href="contato.html">Contato</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<div class="banner">
+			<img src="banner.jpg">
+		</div>
+
+		<section class="principal">
+			<h2 class="titulo-principal">Sobre a Barbearia Alura</h2>
+
+			<img class="utensilios" src="utensilios.jpg" alt="Utensilios de um barbeiro.">
+
+			<p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor
+				para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos
+				clientes a cada dia.</p>
+
+			<p id="missao"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos
+						clientes"</strong>.</em></p>
+
+			<p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui
+				padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
+		</section>
+
+		<section class="beneficios">
+			<h3 class="titulo-principal">Benefícios</h3>
+
+			<div class="conteudo-beneficios">
+				<ul class="lista-beneficios">
+					<li class="itens">Atendimento aos Clientes</li>
+					<li class="itens">Espaço diferenciado</li>
+					<li class="itens">Localização</li>
+					<li class="itens">Profissionais Qualificados</li>
+					<li class="itens">Pontualidade</li>
+					<li class="itens">Limpeza</li>
+				</ul>
+				<img src="beneficios.jpg" class="imagem-beneficios">
+			</div>
+
+			<div class="video">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY" frameborder="0"
+					allow="fullscreen; autoplay; encrypted-media; picture-in-picture"></iframe>
+			</div>
+		</section>
+
+		<section class="mapa">
+			<h3 class="titulo-principal">Localização</h3>
+			<p>Estamos localizados no coração da cidade.</p>
+			<!--<iframe
+				src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d58508.42223495597!2d-46.62718306791332!3d-23.57647320903047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1salura%20sao%20paulo!5e0!3m2!1spt-BR!2sbr!4v1666402851158!5m2!1spt-BR!2sbr"
+				width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+
+			<div id="map"></div>
+		</section>
+	</main>
+
+	<footer>
+		<img class="logo-footer" src="logo-branco.png">
+		<p class="copyright">&copy; Copyright Barbearia Alura - 2019</p>
+	</footer>
+
+	<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" defer></script>
+	<script>
+		// Initialize and add the map
+		function initMap() {
+			// The pinned location
+			const pinnedLocation = { lat: -23.5646162, lng: -46.6517168 };
+			// The map, centered at the location provided
+			const map = new google.maps.Map(document.getElementById("map"), {
+				zoom: 15,
+				center: pinnedLocation,
+			});
+			// The marker, positioned at pinnedLocation
+			const marker = new google.maps.Marker({
+				position: pinnedLocation,
+				map: map,
+			});
+		}
+
+		window.initMap = initMap;
+	</script>
+
+</body>
+
+</html>
