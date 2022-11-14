@@ -32,6 +32,15 @@ header {
 	margin: 0 auto;
 }
 
+.logo-header, .logo-a, .caixa .logo-a {
+	display: inline;
+	width: 100px;
+}
+
+.logo-header img {
+	width: 1px;
+}
+
 nav {
 	display: inline;
 	position: absolute;
@@ -58,15 +67,6 @@ nav a:hover {
 	color: #C78C19;
 	transform: scale(1.2);
 }
-
-.logo-header, .logo-a, .caixa .logo-a {
-	display: inline;
-	width: 100px;
-}
-
-.logo-header img {
-	width: 1px;
-}
 /** HEADER
 ************************************************************************************************
 */
@@ -78,6 +78,7 @@ div.banner > img {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 	width: 100%;
+	box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.3);
 }
 
 .titulo-principal:first-letter {
@@ -143,6 +144,7 @@ div.banner > img {
 	width: 58%;
 	opacity: 1;
 	transition: 400ms;
+	box-shadow: 0px 12px 5px rgba(0, 0, 0, 0.3);
 }
 
 .imagem-beneficios:hover {
@@ -307,3 +309,18 @@ footer {
 /** FOOTER
 ************************************************************************************************
 */
+
+@media screen and (max-width: 480px) {
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    }
+	h1 {
+		text-align: center;
+	}
+	nav {
+		position:static;
+	}
+	.lista-beneficios, imagem-beneficios {
+		width: 100%
+	}
+}
